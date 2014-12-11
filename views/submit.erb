@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head> The News Articles!</head>
+<title> Articles </title>
+<body>
+
+  <h1>Add your Article!!</h1>
+
+  <div>
+    <form method="post" action="/article/submit">
+      <div>
+        <label for ="title">Title:</label>
+        <input type="text" id="title" placeholder="Add Title" name="article[title]" value=<% @title %>>
+      </div>
+      <div>
+        <label for ="description"> Description:</label>
+        <input type="text" id="description" placeholder="Add Description" name="article[description]" value=<% @description %>>
+      </div>
+      <div>
+        <label for ="url"> URL:</label>
+        <input type="url" id="url" placeholder= "URL" name="article[url]" value=<% @url %>>
+      </div>
+      <input type="submit" action="/article" value="Submit Article">
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head> The News Articles!</head>
+<title> Articles </title>
+<body>
+
+  <h1>ARTICLE PAGE</h1>
+
+
+  <a href="/article/submit">Submit an article</a>
+
+  <ul>
+    <% @articles.each do |article| %>
+    <td><b> Article: </b>
+      <li><%= "#{article[:title]} --"%></li>
+      <<b> Description: </b>
+      <%= "#{article[:description]} --"%></td>
+        <td><b>URL:</b>
+    <a target="_blank" href=<%= "https://#{article[:url]}"%>><%="#{article[:url]}"%></a></li></td>
+    <% end %>
+  </ul>
+
+</body>
+</html>
